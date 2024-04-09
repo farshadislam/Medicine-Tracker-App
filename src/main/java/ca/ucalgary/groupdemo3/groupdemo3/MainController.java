@@ -1,12 +1,33 @@
 package ca.ucalgary.groupdemo3.groupdemo3;
 
+import ca.ucalgary.groupdemo3.groupdemo3.util.FileLoader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+
+import java.io.File;
+
 
 public class MainController {
+    private static final String MEDICINE_FORMAT = "%-20s %-20s %-20s %-20s";
+    private static final String INFORMATION_FORMAT = "%-20s %-20s";
+    private static final String MEDICINE_HEADER = String.format(MEDICINE_FORMAT, "Name", "Dosage per day", "Full Bottle", "Currently in Bottle");
+    private static final String SIDE_EFFECT_HEADER = String.format(INFORMATION_FORMAT, "Name", "Side Effects");
+    private static final String FOOD_INTAKE_HEADER = String.format(INFORMATION_FORMAT, "Name", "Food Intake");
+
+    private static String MEDICINE_SEPERATOR = "";
+
+    static {
+        for (int i = 0; i < MEDICINE_HEADER.length(); i++) {
+            MEDICINE_SEPERATOR += "-";
+        }
+    }
+
+    private static Data data = new Data();
 
     @FXML
     private Button addFoodIntakeButton;
