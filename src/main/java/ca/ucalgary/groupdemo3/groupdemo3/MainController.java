@@ -136,27 +136,42 @@ public class MainController {
 
     }
 
+    /**
+     * Handles the action when the "Load" button is clicked.
+     * Opens a file chooser dialog for the user to select a file to load.
+     * If a file is selected and successfully loaded, updates the status label.
+     * If loading fails or no file is selected, updates the status label accordingly.
+     *
+     * @param event The ActionEvent triggered by clicking the "Load" button.
+     */
     @FXML
     void onLoad(ActionEvent event) {
+        // Create a new FileChooser instance
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open Data File");
 
         // Set initial directory to user's home directory
         fileChooser.setInitialDirectory(new File(System.getProperty("user.home")));
 
-        // Show open file dialog
+        // Show open file dialog and wait for user to select a file
         File selectedFile = fileChooser.showOpenDialog(new Stage());
 
+        // Check if a file was selected
         if (selectedFile != null) {
-            // Load the file
+            // Attempt to load the data from the selected file
             Data data = FileLoader.load(selectedFile);
+
+            // Check if data loading was successful
             if (data == null) {
+                // Update status label if data loading failed
                 statusLabel.setText("Failed to load data from " + selectedFile.getName());
             } else {
+                // Update status label if data was successfully loaded
                 statusLabel.setText("Data loaded from " + selectedFile.getName());
                 MainController.data = data;
             }
         } else {
+            // Update status label if no file was selected
             statusLabel.setText("No file selected.");
         }
     }
