@@ -1,6 +1,7 @@
 package ca.ucalgary.groupdemo3.groupdemo3;
 
 import ca.ucalgary.groupdemo3.groupdemo3.objects.Medicine;
+import ca.ucalgary.groupdemo3.groupdemo3.objects.SideEffects;
 import ca.ucalgary.groupdemo3.groupdemo3.util.FileLoader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -238,9 +239,20 @@ public class MainController {
 
     }
 
+    private void viewMedicationsSideEffects() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(SIDE_EFFECT_HEADER);
+        sb.append("\n");
+        for (SideEffects side_effects: data.getAllSideEffectInfo()){
+            sb.append(String.format(INFORMATION_FORMAT, side_effects.getName(), side_effects.getSideEffects()));
+        }
+        rightInfoTextArea.setText(sb.toString());
+    }
+
     @FXML
     void onViewSideEffectsButton(ActionEvent event) {
-
+        rightInfoTextArea.clear();
+        viewMedicationsSideEffects();
     }
 
 }
