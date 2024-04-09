@@ -357,10 +357,6 @@ public class MainController {
     @FXML
     void onViewFoodIntake(ActionEvent event) {
         rightInfoTextArea.clear();
-        viewMedicationsFoodIntake();
-    }
-
-    private void viewMedicationsFoodIntake() {
         StringBuilder sb = new StringBuilder();
         sb.append(FOOD_INTAKE_HEADER);
         sb.append("\n");
@@ -369,6 +365,7 @@ public class MainController {
         }
         rightInfoTextArea.setText(sb.toString());
     }
+
 
     @FXML
     void onViewMedicationButton(ActionEvent event) {
