@@ -277,14 +277,26 @@ public class MainController {
         viewMedications();
     }
 
+    /**
+     * Displays the list of medications in the leftInfoTextArea.
+     */
     private void viewMedications() {
+        // StringBuilder to construct the output
         StringBuilder sb = new StringBuilder();
-        sb.append(MEDICINE_HEADER);
-        //sb.append(MEDICINE_SEPERATOR);
-        sb.append("\n");
-        for (Medicine medicine: data.getAllMedicineInfo()){
-            sb.append(String.format(MEDICINE_FORMAT, medicine.getName(), medicine.getDosage(), medicine.getFullBottle(), medicine.getCurrentBottle(), medicine.getPrice()));
+
+        // Append the header for medicine information
+        sb.append(MEDICINE_HEADER).append("\n");
+
+        // Iterate through each Medicine object in the data
+        for (Medicine medicine : data.getAllMedicineInfo()) {
+            // Append formatted medicine information to the StringBuilder
+            sb.append(String.format(MEDICINE_FORMAT,
+                            medicine.getName(), medicine.getDosage(),
+                            medicine.getFullBottle(), medicine.getCurrentBottle(), medicine.getPrice()))
+                    .append("\n");
         }
+
+        // Set the text of leftInfoTextArea with the constructed StringBuilder content
         leftInfoTextArea.setText(sb.toString());
     }
 
@@ -303,23 +315,38 @@ public class MainController {
 
     }
 
+    /**
+     * Handles the action when the "Save" button is clicked.
+     * Opens a file chooser dialog to select a location to save the data.
+     *
+     * @param event The ActionEvent triggered by clicking the "Save" button.
+     */
     @FXML
     void onSave(ActionEvent event) {
         // Create a new FileChooser instance
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Open Data File");
+        fileChooser.setTitle("Save Data File");
 
         // Set initial directory to user's home directory
         fileChooser.setInitialDirectory(new File(System.getProperty("user.home")));
 
-        // Show open file dialog and wait for user to select a file
-        File file = fileChooser.showOpenDialog(new Stage());
-        if (FileSaver.save(file, data)){
-            statusLabel.setText("Saved to " + file); //output for if file has been saved
-        } else{
-            statusLabel.setText("Failed to save to " + file); //output if file has not been saved
-        }
+        // Show save file dialog and wait for user to select a file
+        File file = fileChooser.showSaveDialog(new Stage());
 
+        // Check if a file was selected
+        if (file != null) {
+            // Attempt to save the data to the selected file
+            if (FileSaver.save(file, data)) {
+                // Output success message if data is saved
+                statusLabel.setText("Saved to: " + file.getAbsolutePath());
+            } else {
+                // Output failure message if data failed to save
+                statusLabel.setText("Failed to save to: " + file.getAbsolutePath());
+            }
+        } else {
+            // Output message if no file was selected
+            statusLabel.setText("No file selected.");
+        }
     }
 
     @FXML
