@@ -41,31 +41,31 @@
          <children>
             <TextField fx:id="medicationSENameTextField" prefHeight="24.0" prefWidth="134.0" />
             <TextField fx:id="sideEffectsTextField" />
-            <Button fx:id="addSideEffectsButton" mnemonicParsing="false" onAction="#onAddSideEffects" prefHeight="26.0" prefWidth="113.0" text="Add Side Effects" />
+            <Button fx:id="addSideEffectsButton" mnemonicParsing="false" onAction="#onAddSideEffects" prefHeight="26.0" prefWidth="119.0" text="Add Side Effects" />
             <TextField fx:id="medicationFINameTextField" />
             <TextField fx:id="foodIntakeTextField" />
-            <Button fx:id="addFoodIntakeButton" mnemonicParsing="false" onAction="#onAddFoodIntake" prefHeight="26.0" prefWidth="113.0" text="Add Food Intake" />
+            <Button fx:id="addFoodIntakeButton" mnemonicParsing="false" onAction="#onAddFoodIntake" prefHeight="26.0" prefWidth="120.0" text="Add Food Intake" />
             <TextField fx:id="madicationNamedelTextField" />
-            <Button fx:id="deleteMedicationButton" mnemonicParsing="false" onAction="#onDeleteMedication" prefHeight="26.0" prefWidth="116.0" text="Delete Medication" />
+            <Button fx:id="deleteMedicationButton" mnemonicParsing="false" onAction="#onDeleteMedication" prefHeight="26.0" prefWidth="120.0" text="Delete Medication" />
          </children>
       </VBox>
    </left>
    <right>
       <VBox prefHeight="356.0" prefWidth="122.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="viewMedicationButton" mnemonicParsing="false" onAction="#onViewMedicationButton" prefHeight="26.0" prefWidth="113.0" text="View Medicine" />
-            <Button fx:id="viewSideEffectsButton" mnemonicParsing="false" onAction="#onViewSideEffectsButton" prefHeight="26.0" prefWidth="113.0" text="View SIde Effects" />
-            <Button fx:id="viewFoodIntakeButton" mnemonicParsing="false" onAction="#onViewFoodIntake" prefHeight="26.0" prefWidth="113.0" text="Veiw Food Intake" />
+            <Button fx:id="viewMedicationButton" mnemonicParsing="false" onAction="#onViewMedicationButton" prefHeight="26.0" prefWidth="123.0" text="View Medicine" />
+            <Button fx:id="viewSideEffectsButton" mnemonicParsing="false" onAction="#onViewSideEffectsButton" prefHeight="26.0" prefWidth="123.0" text="View SIde Effects" />
+            <Button fx:id="viewFoodIntakeButton" mnemonicParsing="false" onAction="#onViewFoodIntake" prefHeight="26.0" prefWidth="123.0" text="Veiw Food Intake" />
             <TextField fx:id="refillPeriodTextField" />
-            <Button fx:id="refillPeriodButton" mnemonicParsing="false" onAction="#onRefillPeriod" prefHeight="26.0" prefWidth="113.0" text="Refill Period" />
-            <Button fx:id="totalExpenseButton" mnemonicParsing="false" onAction="#onTotalExpense" prefHeight="26.0" prefWidth="113.0" text="Total Expense" />
-            <Button fx:id="lowestExpenseButton" mnemonicParsing="false" onAction="#onLowestExpense" prefHeight="26.0" prefWidth="113.0" text="Lowest Expense" />
-            <Button fx:id="highestExpenseButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" text="Highest Expense" />
+            <Button fx:id="refillPeriodButton" mnemonicParsing="false" onAction="#onRefillPeriod" prefHeight="26.0" prefWidth="123.0" text="Refill Period" />
+            <Button fx:id="totalExpenseButton" mnemonicParsing="false" onAction="#onTotalExpense" prefHeight="26.0" prefWidth="123.0" text="Total Expense" />
+            <Button fx:id="lowestExpenseButton" mnemonicParsing="false" onAction="#onLowestExpense" prefHeight="26.0" prefWidth="123.0" text="Lowest Expense" />
+            <Button fx:id="highestExpenseButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="123.0" text="Highest Expense" />
             <TextField fx:id="pillTimeGapsTextField" />
             <TextField fx:id="lastPillIntakeTextField" />
-            <Button fx:id="nextPillTimeButton" mnemonicParsing="false" onAction="#onNextPillTime" prefHeight="26.0" prefWidth="113.0" text="Next Pill Time" />
+            <Button fx:id="nextPillTimeButton" mnemonicParsing="false" onAction="#onNextPillTime" prefHeight="26.0" prefWidth="123.0" text="Next Pill Time" />
             <TextField fx:id="medicationMGTextField" />
-            <Button fx:id="dosageMGButton" mnemonicParsing="false" onAction="#onDosageMG" prefHeight="26.0" prefWidth="113.0" text="Dosage in mg" />
+            <Button fx:id="dosageMGButton" mnemonicParsing="false" onAction="#onDosageMG" prefHeight="26.0" prefWidth="123.0" text="Dosage in mg" />
          </children>
       </VBox>
    </right>
