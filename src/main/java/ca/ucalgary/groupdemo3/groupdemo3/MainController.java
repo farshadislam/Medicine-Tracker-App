@@ -174,25 +174,45 @@ public class MainController {
 
     }
 
+    /**
+     * Handles the action when the "Add Side Effects" button is clicked.
+     * Retrieves the medicine name and side effect from text fields,
+     * checks if the medicine exists, and then stores the side effect information.
+     *
+     * @param event The ActionEvent triggered by clicking the "Add Side Effects" button.
+     */
     @FXML
     void onAddSideEffects(ActionEvent event) {
+        // Variables to store input and status
         String medicine;
         String sideEffect;
         boolean medicineExists;
         boolean success;
+
+        // Get the medicine name from the medicationSENameTextField
         medicine = medicationSENameTextField.getText();
-        medicineExists = data.checkExistMedicine(medicine); //Checks to see if the medicine the user entered exists in the program.
+
+        // Check if the medicine exists in the program's data
+        medicineExists = data.checkExistMedicine(medicine);
+
+        // If medicine doesn't exist, update status label and exit
         if (!medicineExists) {
-            statusLabel.setText(medicine + " does not exists!"); //Output if the medicine doesn't exists
-        }
-        else{
+            statusLabel.setText(medicine + " does not exist!");
+        } else {
+            // Get the side effect from the sideEffectsTextField
             sideEffect = sideEffectsTextField.getText();
-            success = data.storeMedicineSideEffect(medicine, sideEffect); //checks to see if the side effects are stored
+
+            // Store the side effect information for the medicine
+            success = data.storeMedicineSideEffect(medicine, sideEffect);
+
+            // Update status label based on success of storing side effect
             if (success) {
-                statusLabel.setText(sideEffect + " have been added!"); //output if the side effects are stored, otherwise, back to menu.
+                statusLabel.setText(sideEffect + " has been added!");
+            } else {
+                // Output if the side effects are not stored
+                statusLabel.setText("Failed to add side effects for " + medicine);
             }
         }
-
     }
 
     @FXML
