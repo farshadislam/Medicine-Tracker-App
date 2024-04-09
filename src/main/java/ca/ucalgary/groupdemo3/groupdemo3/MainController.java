@@ -215,6 +215,12 @@ public class MainController {
         }
     }
 
+    /**
+     * Handles the action when the "Close" button is clicked.
+     * Exits the JavaFX application.
+     *
+     * @param event The ActionEvent triggered by clicking the "Close" button.
+     */
     @FXML
     void onClose(ActionEvent event) {
         Platform.exit(); //quits the program
