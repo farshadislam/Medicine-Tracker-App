@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="finished view specific medicine">
+    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="finished close">
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/MainController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -263,7 +263,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712649444960</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="done save to file">
+      <option name="closed" value="true" />
+      <created>1712649808140</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1712649808140</updated>
+    </task>
+    <task id="LOCAL-00023" summary="finished close">
+      <option name="closed" value="true" />
+      <created>1712649871300</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1712649871300</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,6 +316,8 @@
     <MESSAGE value="finished viewing side effects" />
     <MESSAGE value="added text field and finished view food intake" />
     <MESSAGE value="finished view specific medicine" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished view specific medicine" />
+    <MESSAGE value="done save to file" />
+    <MESSAGE value="finished close" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished close" />
   </component>
 </project>

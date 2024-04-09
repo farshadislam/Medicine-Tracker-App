@@ -139,6 +139,22 @@ public class MainController {
 
     @FXML
     void onAddSideEffects(ActionEvent event) {
+        String medicine;
+        String sideEffect;
+        boolean medicineExists;
+        boolean success;
+        medicine = medicationSENameTextField.getText();
+        medicineExists = data.checkExistMedicine(medicine); //Checks to see if the medicine the user entered exists in the program.
+        if (!medicineExists) {
+            statusLabel.setText(medicine + " does not exists!"); //Output if the medicine doesn't exists
+        }
+        else{
+            sideEffect = sideEffectsTextField.getText();
+            success = data.storeMedicineSideEffect(medicine, sideEffect); //checks to see if the side effects are stored
+            if (success) {
+                statusLabel.setText(sideEffect + " have been added!"); //output if the side effects are stored, otherwise, back to menu.
+            }
+        }
 
     }
 
