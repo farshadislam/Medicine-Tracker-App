@@ -424,15 +424,32 @@ public class MainController {
         rightInfoTextArea.setText(sb.toString());
     }
 
+    /**
+     * Handles the action when the "View Side Effects" button is clicked.
+     * Displays the list of side effects information in the rightInfoTextArea.
+     *
+     * @param event The ActionEvent triggered by clicking the "View Side Effects" button.
+     */
     @FXML
     void onViewSideEffectsButton(ActionEvent event) {
+        // Clear the rightInfoTextArea before displaying new information
         rightInfoTextArea.clear();
+
+        // StringBuilder to construct the output
         StringBuilder sb = new StringBuilder();
-        sb.append(SIDE_EFFECT_HEADER);
-        sb.append("\n");
-        for (SideEffects side_effects: data.getAllSideEffectInfo()){
-            sb.append(String.format(INFORMATION_FORMAT, side_effects.getName(), side_effects.getSideEffects()));
+
+        // Append the header for side effects information
+        sb.append(SIDE_EFFECT_HEADER).append("\n");
+
+        // Iterate through each SideEffects object in the data
+        for (SideEffects sideEffects : data.getAllSideEffectInfo()) {
+            // Append formatted side effects information to the StringBuilder
+            sb.append(String.format(INFORMATION_FORMAT,
+                            sideEffects.getName(), sideEffects.getSideEffects()))
+                    .append("\n");
         }
+
+        // Set the text of rightInfoTextArea with the constructed StringBuilder content
         rightInfoTextArea.setText(sb.toString());
     }
 
