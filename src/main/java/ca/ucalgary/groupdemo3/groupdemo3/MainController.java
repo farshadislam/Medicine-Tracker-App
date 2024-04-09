@@ -354,15 +354,32 @@ public class MainController {
 
     }
 
+    /**
+     * Handles the action when the "View Food Intake" button is clicked.
+     * Displays the list of food intake information in the rightInfoTextArea.
+     *
+     * @param event The ActionEvent triggered by clicking the "View Food Intake" button.
+     */
     @FXML
     void onViewFoodIntake(ActionEvent event) {
+        // Clear the rightInfoTextArea before displaying new information
         rightInfoTextArea.clear();
+
+        // StringBuilder to construct the output
         StringBuilder sb = new StringBuilder();
-        sb.append(FOOD_INTAKE_HEADER);
-        sb.append("\n");
-        for (FoodIntake food_intake: data.getAllFoodIntakeInfo()){
-            sb.append(String.format(INFORMATION_FORMAT, food_intake.getName(), food_intake.getFoodIntake()));
+
+        // Append the header for food intake information
+        sb.append(FOOD_INTAKE_HEADER).append("\n");
+
+        // Iterate through each FoodIntake object in the data
+        for (FoodIntake foodIntake : data.getAllFoodIntakeInfo()) {
+            // Append formatted food intake information to the StringBuilder
+            sb.append(String.format(INFORMATION_FORMAT,
+                            foodIntake.getName(), foodIntake.getFoodIntake()))
+                    .append("\n");
         }
+
+        // Set the text of rightInfoTextArea with the constructed StringBuilder content
         rightInfoTextArea.setText(sb.toString());
     }
 
