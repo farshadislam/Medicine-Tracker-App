@@ -138,7 +138,27 @@ public class MainController {
 
     @FXML
     void onLoad(ActionEvent event) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Data File");
 
+        // Set initial directory to user's home directory
+        fileChooser.setInitialDirectory(new File(System.getProperty("user.home")));
+
+        // Show open file dialog
+        File selectedFile = fileChooser.showOpenDialog(new Stage());
+
+        if (selectedFile != null) {
+            // Load the file
+            Data data = FileLoader.load(selectedFile);
+            if (data == null) {
+                statusLabel.setText("Failed to load data from " + selectedFile.getName());
+            } else {
+                statusLabel.setText("Data loaded from " + selectedFile.getName());
+                MainController.data = data;
+            }
+        } else {
+            statusLabel.setText("No file selected.");
+        }
     }
 
     @FXML
