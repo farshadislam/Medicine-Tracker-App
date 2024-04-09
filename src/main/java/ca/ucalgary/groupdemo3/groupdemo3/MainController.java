@@ -384,20 +384,43 @@ public class MainController {
     }
 
 
+    /**
+     * Handles the action when the "View Medication" button is clicked.
+     * Displays the information of a specific medication in the rightInfoTextArea.
+     *
+     * @param event The ActionEvent triggered by clicking the "View Medication" button.
+     */
     @FXML
     void onViewMedicationButton(ActionEvent event) {
+        // Clear the rightInfoTextArea before displaying new information
         rightInfoTextArea.clear();
+
+        // Get the name of the medication from the viewMedicineNameTextField
         String name = viewMedicineNameTextField.getText();
+
+        // Get the Medicine object with the given name from the data
         Medicine medicine = data.getMedicationInfo(name);
+
+        // StringBuilder to construct the output
         StringBuilder sb = new StringBuilder();
+
+        // Check if the Medicine object exists
         if (medicine != null) {
-            sb.append(MEDICINE_HEADER);
-            sb.append("\n");
-            sb.append(String.format(MEDICINE_FORMAT, medicine.getName(), medicine.getDosage(), medicine.getFullBottle(), medicine.getCurrentBottle(), medicine.getPrice()));
+            // Append the header for medication information
+            sb.append(MEDICINE_HEADER).append("\n");
+
+            // Append formatted medication information to the StringBuilder
+            sb.append(String.format(MEDICINE_FORMAT,
+                            medicine.getName(), medicine.getDosage(),
+                            medicine.getFullBottle(), medicine.getCurrentBottle(),
+                            medicine.getPrice()))
+                    .append("\n");
+        } else {
+            // Output an error message if the Medicine object does not exist
+            statusLabel.setText("Medicine with name '" + name + "' does not exist!");
         }
-        else{
-            statusLabel.setText("core.objects.Medicine with name '" + name + "' does not exist!%n");
-        }
+
+        // Set the text of rightInfoTextArea with the constructed StringBuilder content
         rightInfoTextArea.setText(sb.toString());
     }
 
