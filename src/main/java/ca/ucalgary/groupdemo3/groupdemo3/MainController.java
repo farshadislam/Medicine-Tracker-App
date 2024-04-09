@@ -1,5 +1,6 @@
 package ca.ucalgary.groupdemo3.groupdemo3;
 
+import ca.ucalgary.groupdemo3.groupdemo3.objects.FoodIntake;
 import ca.ucalgary.groupdemo3.groupdemo3.objects.Medicine;
 import ca.ucalgary.groupdemo3.groupdemo3.objects.SideEffects;
 import ca.ucalgary.groupdemo3.groupdemo3.util.FileLoader;
@@ -52,6 +53,9 @@ public class MainController {
 
     @FXML
     private Button dosageMGButton;
+
+    @FXML
+    private TextField viewMedicineNameTextField;
 
     @FXML
     private TextField foodIntakeTextField;
@@ -230,7 +234,18 @@ public class MainController {
 
     @FXML
     void onViewFoodIntake(ActionEvent event) {
+        rightInfoTextArea.clear();
+        viewMedicationsFoodIntake();
+    }
 
+    private void viewMedicationsFoodIntake() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(FOOD_INTAKE_HEADER);
+        sb.append("\n");
+        for (FoodIntake food_intake: data.getAllFoodIntakeInfo()){
+            sb.append(String.format(INFORMATION_FORMAT, food_intake.getName(), food_intake.getFoodIntake()));
+        }
+        rightInfoTextArea.setText(sb.toString());
     }
 
     @FXML
