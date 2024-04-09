@@ -250,8 +250,23 @@ public class MainController {
 
     @FXML
     void onViewMedicationButton(ActionEvent event) {
+        rightInfoTextArea.clear();
+        viewMedication();
+    }
 
-
+    private void viewMedication() {
+        String name = viewMedicineNameTextField.getText();
+        Medicine medicine = data.getMedicationInfo(name);
+        StringBuilder sb = new StringBuilder();
+        if (medicine != null) {
+            sb.append(MEDICINE_HEADER);
+            sb.append("\n");
+            sb.append(String.format(MEDICINE_FORMAT, medicine.getName(), medicine.getDosage(), medicine.getFullBottle(), medicine.getCurrentBottle(), medicine.getPrice()));
+        }
+        else{
+            statusLabel.setText("core.objects.Medicine with name '" + name + "' does not exist!%n");
+        }
+        rightInfoTextArea.setText(sb.toString());
     }
 
     private void viewMedicationsSideEffects() {
