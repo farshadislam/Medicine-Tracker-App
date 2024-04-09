@@ -4,6 +4,7 @@ import ca.ucalgary.groupdemo3.groupdemo3.objects.FoodIntake;
 import ca.ucalgary.groupdemo3.groupdemo3.objects.Medicine;
 import ca.ucalgary.groupdemo3.groupdemo3.objects.SideEffects;
 import ca.ucalgary.groupdemo3.groupdemo3.util.FileLoader;
+import ca.ucalgary.groupdemo3.groupdemo3.util.FileSaver;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -173,20 +174,20 @@ public class MainController {
         fileChooser.setInitialDirectory(new File(System.getProperty("user.home")));
 
         // Show open file dialog and wait for user to select a file
-        File selectedFile = fileChooser.showOpenDialog(new Stage());
+        File file = fileChooser.showOpenDialog(new Stage());
 
         // Check if a file was selected
-        if (selectedFile != null) {
+        if (file != null) {
             // Attempt to load the data from the selected file
-            Data data = FileLoader.load(selectedFile);
+            Data data = FileLoader.load(file);
 
             // Check if data loading was successful
             if (data == null) {
                 // Update status label if data loading failed
-                statusLabel.setText("Failed to load data from " + selectedFile.getName());
+                statusLabel.setText("Failed to load data from " + file.getName());
             } else {
                 // Update status label if data was successfully loaded
-                statusLabel.setText("Data loaded from " + selectedFile.getName());
+                statusLabel.setText("Data loaded from " + file.getName());
                 MainController.data = data;
             }
         } else {
@@ -224,6 +225,20 @@ public class MainController {
 
     @FXML
     void onSave(ActionEvent event) {
+        // Create a new FileChooser instance
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Data File");
+
+        // Set initial directory to user's home directory
+        fileChooser.setInitialDirectory(new File(System.getProperty("user.home")));
+
+        // Show open file dialog and wait for user to select a file
+        File file = fileChooser.showOpenDialog(new Stage());
+        if (FileSaver.save(file, data)){
+            statusLabel.setText("Saved to " + file); //output for if file has been saved
+        } else{
+            statusLabel.setText("Failed to save to " + file); //output if file has not been saved
+        }
 
     }
 

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="added text field and finished view food intake">
+    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="finished view specific medicine">
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/MainController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -255,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712648830945</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="finished view specific medicine">
+      <option name="closed" value="true" />
+      <created>1712649444960</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1712649444960</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -291,6 +299,7 @@
     <MESSAGE value="fixed size for board" />
     <MESSAGE value="finished viewing side effects" />
     <MESSAGE value="added text field and finished view food intake" />
-    <option name="LAST_COMMIT_MESSAGE" value="added text field and finished view food intake" />
+    <MESSAGE value="finished view specific medicine" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished view specific medicine" />
   </component>
 </project>
