@@ -387,10 +387,6 @@ public class MainController {
     @FXML
     void onViewMedicationButton(ActionEvent event) {
         rightInfoTextArea.clear();
-        viewMedication();
-    }
-
-    private void viewMedication() {
         String name = viewMedicineNameTextField.getText();
         Medicine medicine = data.getMedicationInfo(name);
         StringBuilder sb = new StringBuilder();
@@ -405,7 +401,9 @@ public class MainController {
         rightInfoTextArea.setText(sb.toString());
     }
 
-    private void viewMedicationsSideEffects() {
+    @FXML
+    void onViewSideEffectsButton(ActionEvent event) {
+        rightInfoTextArea.clear();
         StringBuilder sb = new StringBuilder();
         sb.append(SIDE_EFFECT_HEADER);
         sb.append("\n");
@@ -413,12 +411,6 @@ public class MainController {
             sb.append(String.format(INFORMATION_FORMAT, side_effects.getName(), side_effects.getSideEffects()));
         }
         rightInfoTextArea.setText(sb.toString());
-    }
-
-    @FXML
-    void onViewSideEffectsButton(ActionEvent event) {
-        rightInfoTextArea.clear();
-        viewMedicationsSideEffects();
     }
 
 }
