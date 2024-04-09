@@ -129,6 +129,25 @@ public class MainController {
 
     @FXML
     void onAddFoodIntake(ActionEvent event) {
+        String medicine;
+        String answer;
+        boolean medicineExists;
+        boolean success;
+        medicine = medicationFINameTextField.getText();
+        medicineExists = data.checkExistMedicine(medicine); //checks to see the entered medicine exists on the program
+        if (!medicineExists){
+            statusLabel.setText(medicine + " does not exists!");//output if the medicine doesn't exist
+        }
+        else{
+            answer = foodIntakeTextField.getText();
+            success = data.storeMedicineFoodIntake(medicine, answer); //checks to see if the food intake data was stored
+            if (success){
+                statusLabel.setText("Information has been stored!"); //output if information has been stored
+            }
+            else{
+                statusLabel.setText("Information could not be stored!"); //output of information wasn't able to be stored
+            }
+        }
 
     }
 
