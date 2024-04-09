@@ -44,6 +44,9 @@ public class MainController {
     private Button addSideEffectsButton;
 
     @FXML
+    private TextArea rightInfoTextArea;
+
+    @FXML
     private Button deleteMedicationButton;
 
     @FXML
@@ -72,6 +75,9 @@ public class MainController {
 
     @FXML
     private TextField medicationMGTextField;
+
+    @FXML
+    private TextArea leftInfoTextArea;
 
     @FXML
     private TextField medicationSENameTextField;
@@ -193,7 +199,7 @@ public class MainController {
         for (Medicine medicine: data.getAllMedicineInfo()){
             sb.append(String.format(MEDICINE_FORMAT, medicine.getName(), medicine.getDosage(), medicine.getFullBottle(), medicine.getCurrentBottle(), medicine.getPrice()));
         }
-        infoTextArea.setText(sb.toString());
+        leftInfoTextArea.setText(sb.toString());
     }
 
     @FXML

@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="changed layout of scene builder">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="added text area and finished view medication">
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ca/ucalgary/groupdemo3/groupdemo3/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ca/ucalgary/groupdemo3/groupdemo3/main.fxml" afterDir="false" />
     </list>
@@ -217,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712645906852</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added text area and finished view medication">
+      <option name="closed" value="true" />
+      <created>1712647082301</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1712647082302</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,6 +255,7 @@
     <MESSAGE value="added test file" />
     <MESSAGE value="finished javadoc and inline comments for load" />
     <MESSAGE value="changed layout of scene builder" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed layout of scene builder" />
+    <MESSAGE value="added text area and finished view medication" />
+    <option name="LAST_COMMIT_MESSAGE" value="added text area and finished view medication" />
   </component>
 </project>
