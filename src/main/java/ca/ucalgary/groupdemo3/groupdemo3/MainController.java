@@ -1,10 +1,12 @@
 package ca.ucalgary.groupdemo3.groupdemo3;
 
+import ca.ucalgary.groupdemo3.groupdemo3.objects.Medicine;
 import ca.ucalgary.groupdemo3.groupdemo3.util.FileLoader;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -31,6 +33,9 @@ public class MainController {
 
     @FXML
     private Button addFoodIntakeButton;
+
+    @FXML
+    private TextArea infoTextArea;
 
     @FXML
     private Label infoLabel;
@@ -177,6 +182,18 @@ public class MainController {
             // Update status label if no file was selected
             statusLabel.setText("No file selected.");
         }
+        viewMedications();
+    }
+
+    private void viewMedications() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(MEDICINE_HEADER);
+        //sb.append(MEDICINE_SEPERATOR);
+        sb.append("\n");
+        for (Medicine medicine: data.getAllMedicineInfo()){
+            sb.append(String.format(MEDICINE_FORMAT, medicine.getName(), medicine.getDosage(), medicine.getFullBottle(), medicine.getCurrentBottle(), medicine.getPrice()));
+        }
+        infoTextArea.setText(sb.toString());
     }
 
     @FXML
@@ -211,6 +228,7 @@ public class MainController {
 
     @FXML
     void onViewMedicationButton(ActionEvent event) {
+
 
     }
 
