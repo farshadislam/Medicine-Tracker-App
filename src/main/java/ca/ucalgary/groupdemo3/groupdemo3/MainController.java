@@ -5,6 +5,7 @@ import ca.ucalgary.groupdemo3.groupdemo3.objects.Medicine;
 import ca.ucalgary.groupdemo3.groupdemo3.objects.SideEffects;
 import ca.ucalgary.groupdemo3.groupdemo3.util.FileLoader;
 import ca.ucalgary.groupdemo3.groupdemo3.util.FileSaver;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -143,7 +144,7 @@ public class MainController {
 
     @FXML
     void onClose(ActionEvent event) {
-
+        Platform.exit(); //quits the program
     }
 
     @FXML
