@@ -39,38 +39,38 @@
    <left>
       <VBox prefHeight="356.0" prefWidth="118.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField prefHeight="24.0" prefWidth="134.0" />
-            <TextField />
-            <Button mnemonicParsing="false" text="Add Side Effects" />
-            <TextField />
-            <TextField />
-            <Button mnemonicParsing="false" text="Add Food Intake" />
-            <TextField />
-            <Button mnemonicParsing="false" text="Delete Medication" />
+            <TextField fx:id="medicationSENameTextField" prefHeight="24.0" prefWidth="134.0" />
+            <TextField fx:id="sideEffectsTextField" />
+            <Button fx:id="addSideEffectsButton" mnemonicParsing="false" onAction="#onAddSideEffects" prefHeight="26.0" prefWidth="113.0" text="Add Side Effects" />
+            <TextField fx:id="medicationFINameTextField" />
+            <TextField fx:id="foodIntakeTextField" />
+            <Button fx:id="addFoodIntakeButton" mnemonicParsing="false" onAction="#onAddFoodIntake" prefHeight="26.0" prefWidth="113.0" text="Add Food Intake" />
+            <TextField fx:id="madicationNamedelTextField" />
+            <Button fx:id="deleteMedicationButton" mnemonicParsing="false" onAction="#onDeleteMedication" prefHeight="26.0" prefWidth="116.0" text="Delete Medication" />
          </children>
       </VBox>
    </left>
    <right>
       <VBox prefHeight="356.0" prefWidth="122.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="View Medicine" />
-            <Button mnemonicParsing="false" text="View SIde Effects" />
-            <Button mnemonicParsing="false" text="Veiw Food Intake" />
-            <TextField />
-            <Button mnemonicParsing="false" text="Refill Period" />
-            <Button mnemonicParsing="false" text="Total Expense" />
-            <Button mnemonicParsing="false" text="Lowest Expense" />
-            <Button mnemonicParsing="false" text="Highest Expense" />
-            <TextField />
-            <TextField />
-            <Button mnemonicParsing="false" text="Next Pill Time" />
-            <TextField />
-            <Button mnemonicParsing="false" text="Dosage in mg" />
+            <Button fx:id="viewMedicationButton" mnemonicParsing="false" onAction="#onViewMedicationButton" prefHeight="26.0" prefWidth="113.0" text="View Medicine" />
+            <Button fx:id="viewSideEffectsButton" mnemonicParsing="false" onAction="#onViewSideEffectsButton" prefHeight="26.0" prefWidth="113.0" text="View SIde Effects" />
+            <Button fx:id="viewFoodIntakeButton" mnemonicParsing="false" onAction="#onViewFoodIntake" prefHeight="26.0" prefWidth="113.0" text="Veiw Food Intake" />
+            <TextField fx:id="refillPeriodTextField" />
+            <Button fx:id="refillPeriodButton" mnemonicParsing="false" onAction="#onRefillPeriod" prefHeight="26.0" prefWidth="113.0" text="Refill Period" />
+            <Button fx:id="totalExpenseButton" mnemonicParsing="false" onAction="#onTotalExpense" prefHeight="26.0" prefWidth="113.0" text="Total Expense" />
+            <Button fx:id="lowestExpenseButton" mnemonicParsing="false" onAction="#onLowestExpense" prefHeight="26.0" prefWidth="113.0" text="Lowest Expense" />
+            <Button fx:id="highestExpenseButton" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" text="Highest Expense" />
+            <TextField fx:id="pillTimeGapsTextField" />
+            <TextField fx:id="lastPillIntakeTextField" />
+            <Button fx:id="nextPillTimeButton" mnemonicParsing="false" onAction="#onNextPillTime" prefHeight="26.0" prefWidth="113.0" text="Next Pill Time" />
+            <TextField fx:id="medicationMGTextField" />
+            <Button fx:id="dosageMGButton" mnemonicParsing="false" onAction="#onDosageMG" prefHeight="26.0" prefWidth="113.0" text="Dosage in mg" />
          </children>
       </VBox>
    </right>
    <bottom>
-      <Label BorderPane.alignment="CENTER" />
+      <Label fx:id="statusLabel" BorderPane.alignment="CENTER" />
    </bottom>
    <center>
       <SplitPane dividerPositions="0.43844221105527637" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
@@ -81,7 +81,7 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="349.0" prefWidth="168.0">
                            <children>
-                              <Label layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="0.0" />
+                              <Label fx:id="leftInfoLabel" layoutX="10.0" layoutY="14.0" prefHeight="17.0" prefWidth="0.0" />
                            </children>
                         </AnchorPane>
                     </content>
@@ -94,7 +94,7 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="343.0" prefWidth="209.0">
                            <children>
-                              <Label layoutX="14.0" layoutY="14.0" />
+                              <Label fx:id="rightInfoLabel" layoutX="14.0" layoutY="14.0" />
                            </children>
                         </AnchorPane>
                     </content>
