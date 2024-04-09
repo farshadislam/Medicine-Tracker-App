@@ -33,6 +33,9 @@ public class MainController {
     private Button addFoodIntakeButton;
 
     @FXML
+    private Label infoLabel;
+
+    @FXML
     private Button addSideEffectsButton;
 
     @FXML
