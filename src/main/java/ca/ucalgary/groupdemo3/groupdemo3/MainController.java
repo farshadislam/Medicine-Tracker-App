@@ -127,28 +127,46 @@ public class MainController {
 
     }
 
+    /**
+     * Handles the action when the "Add Food Intake" button is clicked.
+     * Retrieves the medicine name and food intake answer from text fields,
+     * checks if the medicine exists, and then stores the food intake information.
+     *
+     * @param event The ActionEvent triggered by clicking the "Add Food Intake" button.
+     */
     @FXML
     void onAddFoodIntake(ActionEvent event) {
+        // Variables to store input and status
         String medicine;
         String answer;
         boolean medicineExists;
         boolean success;
+
+        // Get the medicine name from the medicationFINameTextField
         medicine = medicationFINameTextField.getText();
-        medicineExists = data.checkExistMedicine(medicine); //checks to see the entered medicine exists on the program
+
+        // Check if the medicine exists in the program's data
+        medicineExists = data.checkExistMedicine(medicine);
+
+        // If medicine doesn't exist, update status label and exit
         if (!medicineExists){
-            statusLabel.setText(medicine + " does not exists!");//output if the medicine doesn't exist
+            statusLabel.setText(medicine + " does not exist!");
         }
         else{
+            // Get the food intake answer from the foodIntakeTextField
             answer = foodIntakeTextField.getText();
-            success = data.storeMedicineFoodIntake(medicine, answer); //checks to see if the food intake data was stored
+
+            // Store the food intake information for the medicine
+            success = data.storeMedicineFoodIntake(medicine, answer);
+
+            // Update status label based on success of storing information
             if (success){
-                statusLabel.setText("Information has been stored!"); //output if information has been stored
+                statusLabel.setText("Information has been stored!");
             }
             else{
-                statusLabel.setText("Information could not be stored!"); //output of information wasn't able to be stored
+                statusLabel.setText("Information could not be stored!");
             }
         }
-
     }
 
     @FXML

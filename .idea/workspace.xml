@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="finished close">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/MainController.java" afterDir="false" />
-    </list>
+    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="finished food intake" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -279,7 +277,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712649871300</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="updated side effect function">
+      <option name="closed" value="true" />
+      <created>1712650458676</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1712650458676</updated>
+    </task>
+    <task id="LOCAL-00025" summary="finished food intake">
+      <option name="closed" value="true" />
+      <created>1712650752662</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1712650752662</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -318,6 +332,8 @@
     <MESSAGE value="finished view specific medicine" />
     <MESSAGE value="done save to file" />
     <MESSAGE value="finished close" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished close" />
+    <MESSAGE value="updated side effect function" />
+    <MESSAGE value="finished food intake" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished food intake" />
   </component>
 </project>
