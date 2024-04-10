@@ -204,7 +204,7 @@ Function to view specific medicinal info
     public double getTotalExpense() { // Calculate total price of all monthly medication
         /** Function to retrieve total expenses
          * @returns double totalPay, containing the sum of all medical expenses combined
-        */
+         */
         double totalPay = 0; // Initialize return variable
         for (Medicine medicine : medicines) { // Iterate through allExpenses Double ArrayList
             totalPay = totalPay + medicine.getPrice(); // Add every single entry together

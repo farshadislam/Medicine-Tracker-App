@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="finished food intake" />
+    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="finished inline and javadoc comments for view side effects">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/Calculations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/Calculations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/Menu.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -293,7 +299,79 @@
       <option name="project" value="LOCAL" />
       <updated>1712650752662</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="finihsed inline and javadoc for add food intake">
+      <option name="closed" value="true" />
+      <created>1712651034152</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1712651034152</updated>
+    </task>
+    <task id="LOCAL-00027" summary="finihsed inline and javadoc for add side effect">
+      <option name="closed" value="true" />
+      <created>1712651071622</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1712651071622</updated>
+    </task>
+    <task id="LOCAL-00028" summary="finished javadoc for close">
+      <option name="closed" value="true" />
+      <created>1712651109886</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1712651109886</updated>
+    </task>
+    <task id="LOCAL-00029" summary="finished javadoc and inline comments for save">
+      <option name="closed" value="true" />
+      <created>1712651176390</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1712651176390</updated>
+    </task>
+    <task id="LOCAL-00030" summary="made view food intake function shorter">
+      <option name="closed" value="true" />
+      <created>1712651227320</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1712651227320</updated>
+    </task>
+    <task id="LOCAL-00031" summary="finished inline comments and javadoc comments for view food intake">
+      <option name="closed" value="true" />
+      <created>1712651269014</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1712651269014</updated>
+    </task>
+    <task id="LOCAL-00032" summary="made view side effects shorter">
+      <option name="closed" value="true" />
+      <created>1712651343720</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1712651343720</updated>
+    </task>
+    <task id="LOCAL-00033" summary="finished inline comments and javadoc for view medication">
+      <option name="closed" value="true" />
+      <created>1712651398599</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1712651398599</updated>
+    </task>
+    <task id="LOCAL-00034" summary="finished inline and javadoc comments for view side effects">
+      <option name="closed" value="true" />
+      <created>1712651434693</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1712651434693</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,15 +387,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="initial commit" />
-    <MESSAGE value="added files from last demo" />
-    <MESSAGE value="created layout on scene builder" />
-    <MESSAGE value="Updates names for buttons" />
-    <MESSAGE value="gace fx ids and on action names" />
-    <MESSAGE value="added on actions to menu items" />
-    <MESSAGE value="fixed size for scroll pane" />
-    <MESSAGE value="changed size for buttons" />
-    <MESSAGE value="fixed issue with running GUI and renamed main.fxml" />
     <MESSAGE value="renamed to main" />
     <MESSAGE value="fixed sizes and set up controller" />
     <MESSAGE value="finished load" />
@@ -334,6 +403,15 @@
     <MESSAGE value="finished close" />
     <MESSAGE value="updated side effect function" />
     <MESSAGE value="finished food intake" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished food intake" />
+    <MESSAGE value="finihsed inline and javadoc for add food intake" />
+    <MESSAGE value="finihsed inline and javadoc for add side effect" />
+    <MESSAGE value="finished javadoc for close" />
+    <MESSAGE value="finished javadoc and inline comments for save" />
+    <MESSAGE value="made view food intake function shorter" />
+    <MESSAGE value="finished inline comments and javadoc comments for view food intake" />
+    <MESSAGE value="made view side effects shorter" />
+    <MESSAGE value="finished inline comments and javadoc for view medication" />
+    <MESSAGE value="finished inline and javadoc comments for view side effects" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished inline and javadoc comments for view side effects" />
   </component>
 </project>
