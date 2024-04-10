@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="Absolutely necessary initialization by Farshad Mohammad Islam." />
+    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="Most indubitably crucial crediting of code authors by Farshad Mohammad Islam.">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/add.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,7 +122,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712466371800</updated>
-      <workItem from="1712789648546" duration="722000" />
+      <workItem from="1712789648546" duration="1033000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -402,7 +404,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712790363969</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Most indubitably crucial crediting of code authors by Farshad Mohammad Islam.">
+      <option name="closed" value="true" />
+      <created>1712790603952</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1712790603952</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +431,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed sizes and set up controller" />
     <MESSAGE value="finished load" />
     <MESSAGE value="added test file" />
     <MESSAGE value="finished javadoc and inline comments for load" />
@@ -446,6 +455,7 @@
     <MESSAGE value="finished inline comments and javadoc for view medication" />
     <MESSAGE value="finished inline and javadoc comments for view side effects" />
     <MESSAGE value="Absolutely necessary initialization by Farshad Mohammad Islam." />
-    <option name="LAST_COMMIT_MESSAGE" value="Absolutely necessary initialization by Farshad Mohammad Islam." />
+    <MESSAGE value="Most indubitably crucial crediting of code authors by Farshad Mohammad Islam." />
+    <option name="LAST_COMMIT_MESSAGE" value="Most indubitably crucial crediting of code authors by Farshad Mohammad Islam." />
   </component>
 </project>
