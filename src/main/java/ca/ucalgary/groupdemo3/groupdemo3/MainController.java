@@ -1,5 +1,4 @@
 package ca.ucalgary.groupdemo3.groupdemo3;
-
 import ca.ucalgary.groupdemo3.groupdemo3.objects.FoodIntake;
 import ca.ucalgary.groupdemo3.groupdemo3.objects.Medicine;
 import ca.ucalgary.groupdemo3.groupdemo3.objects.SideEffects;
@@ -8,13 +7,9 @@ import ca.ucalgary.groupdemo3.groupdemo3.util.FileSaver;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
 import java.io.File;
 
 
@@ -124,8 +119,13 @@ public class MainController {
 
     @FXML
     void onAbout(ActionEvent event) {
-
+        Alert aboutAlert = new Alert(Alert.AlertType.INFORMATION);
+        aboutAlert.setTitle("About");
+        aboutAlert.setHeaderText("Medicine Tracker for Patient usage");
+        aboutAlert.setContentText("Authors: \nHarris Jan\n Hira Asad\n Farshad Islam");
+        aboutAlert.showAndWait();
     }
+
 
     /**
      * Handles the action when the "Add Food Intake" button is clicked.
@@ -171,7 +171,6 @@ public class MainController {
 
     @FXML
     void onAddMedicine(ActionEvent event) {
-
     }
 
     /**
