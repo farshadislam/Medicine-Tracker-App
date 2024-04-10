@@ -172,6 +172,7 @@ public class MainController {
 
     @FXML
     void onAddMedicine(ActionEvent event) {
+
     }
 
     /**
