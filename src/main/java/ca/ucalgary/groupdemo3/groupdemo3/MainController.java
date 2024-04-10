@@ -8,6 +8,7 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import java.io.File;
@@ -248,6 +249,9 @@ public class MainController {
         // Create a new FileChooser instance
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open Data File");
+        statusLabel.setTextFill(Color.RED);
+        statusLabel.setTextFill(Color.DARKGREEN);
+        statusLabel.setText("");
 
         // Set initial directory to user's home directory
         fileChooser.setInitialDirectory(new File(System.getProperty("user.home")));
@@ -265,6 +269,7 @@ public class MainController {
                 // Update status label if data loading failed
                 statusLabel.setText("Failed to load data from " + file.getName());
             } else {
+                statusLabel.setTextFill(Color.DARKGREEN);
                 // Update status label if data was successfully loaded
                 statusLabel.setText("Data loaded from " + file.getName());
                 MainController.data = data;
