@@ -17,7 +17,7 @@ import java.io.File;
 public class MainController {
     private static final String MEDICINE_FORMAT = "%-20s %-20s %-20s %-20s";
     private static final String INFORMATION_FORMAT = "%-20s %-20s";
-    private static final String MEDICINE_HEADER = String.format(MEDICINE_FORMAT, "Name", "Dosage per day", "Full Bottle", "Currently in Bottle");
+    private static final String MEDICINE_HEADER = String.format(MEDICINE_FORMAT, "Name", "Dosage per day", "Full Bottle", "Currently in Bottle", "Price");
     private static final String SIDE_EFFECT_HEADER = String.format(INFORMATION_FORMAT, "Name", "Side Effects");
     private static final String FOOD_INTAKE_HEADER = String.format(INFORMATION_FORMAT, "Name", "Food Intake");
 
@@ -249,15 +249,17 @@ public class MainController {
         // Create a new FileChooser instance
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open Data File");
-        statusLabel.setTextFill(Color.RED);
-        statusLabel.setTextFill(Color.DARKGREEN);
-        statusLabel.setText("");
 
         // Set initial directory to user's home directory
         fileChooser.setInitialDirectory(new File(System.getProperty("user.home")));
 
         // Show open file dialog and wait for user to select a file
         File file = fileChooser.showOpenDialog(new Stage());
+
+        // Setting colours for error and success messages
+        statusLabel.setTextFill(Color.RED);
+        statusLabel.setTextFill(Color.DARKGREEN);
+        statusLabel.setText("");
 
         // Check if a file was selected
         if (file != null) {
@@ -267,6 +269,7 @@ public class MainController {
             // Check if data loading was successful
             if (data == null) {
                 // Update status label if data loading failed
+                statusLabel.setTextFill(Color.RED);
                 statusLabel.setText("Failed to load data from " + file.getName());
             } else {
                 statusLabel.setTextFill(Color.DARKGREEN);
@@ -336,15 +339,20 @@ public class MainController {
 
         // Show save file dialog and wait for user to select a file
         File file = fileChooser.showSaveDialog(new Stage());
+        statusLabel.setTextFill(Color.RED);
+        statusLabel.setTextFill(Color.DARKGREEN);
+        statusLabel.setText("");
 
         // Check if a file was selected
         if (file != null) {
             // Attempt to save the data to the selected file
             if (FileSaver.save(file, data)) {
                 // Output success message if data is saved
+                statusLabel.setTextFill(Color.DARKGREEN);
                 statusLabel.setText("Saved to: " + file.getAbsolutePath());
             } else {
                 // Output failure message if data failed to save
+                statusLabel.setTextFill(Color.RED);
                 statusLabel.setText("Failed to save to: " + file.getAbsolutePath());
             }
         } else {
