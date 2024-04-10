@@ -180,7 +180,7 @@ public class Menu { // commenttt
         System.out.println("Stored a new medicine!");
     }
 
-    private static String EnterName() {
+    static String EnterName() {
         System.out.println("Enter the name of medicine: ");
         String medicineName;
         do {
