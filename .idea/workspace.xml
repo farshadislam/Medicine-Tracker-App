@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="finished inline and javadoc comments for view side effects">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="Absolutely necessary initialization by Farshad Mohammad Islam." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -122,7 +120,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712466371800</updated>
-      <workItem from="1712789648546" duration="322000" />
+      <workItem from="1712789648546" duration="722000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -396,7 +394,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712651434693</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Absolutely necessary initialization by Farshad Mohammad Islam.">
+      <option name="closed" value="true" />
+      <created>1712790363969</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1712790363969</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +421,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="renamed to main" />
     <MESSAGE value="fixed sizes and set up controller" />
     <MESSAGE value="finished load" />
     <MESSAGE value="added test file" />
@@ -440,6 +445,7 @@
     <MESSAGE value="made view side effects shorter" />
     <MESSAGE value="finished inline comments and javadoc for view medication" />
     <MESSAGE value="finished inline and javadoc comments for view side effects" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished inline and javadoc comments for view side effects" />
+    <MESSAGE value="Absolutely necessary initialization by Farshad Mohammad Islam." />
+    <option name="LAST_COMMIT_MESSAGE" value="Absolutely necessary initialization by Farshad Mohammad Islam." />
   </component>
 </project>

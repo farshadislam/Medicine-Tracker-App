@@ -1,3 +1,9 @@
+/**
+ * Written by Hira Asad, Harris Jan, and Farshad Islam
+ * Wednesday, April 10th, 2024
+ * Tutorial 12 - Adrian Tadic
+ */
+
 package ca.ucalgary.groupdemo3.groupdemo3;
 import ca.ucalgary.groupdemo3.groupdemo3.objects.FoodIntake;
 import ca.ucalgary.groupdemo3.groupdemo3.objects.Medicine;
@@ -123,7 +129,7 @@ public class MainController {
         Alert aboutAlert = new Alert(Alert.AlertType.INFORMATION);
         aboutAlert.setTitle("About");
         aboutAlert.setHeaderText("Medicine Tracker for Patient usage");
-        aboutAlert.setContentText("Authors: \nHarris Jan\n Hira Asad\n Farshad Islam");
+        aboutAlert.setContentText("Authors: \nHarris Jan\nHira Asad\nFarshad Islam");
         aboutAlert.showAndWait();
     }
 
