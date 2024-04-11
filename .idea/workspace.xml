@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="The birth of my magnum opus: master-farshad.">
+    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="Properly established means of viewing refill period as status message at the bottom of the GUI window.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/AddController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/AddController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/Calculations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/Calculations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ca/ucalgary/groupdemo3/groupdemo3/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ca/ucalgary/groupdemo3/groupdemo3/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +44,7 @@
   <component name="GitLabMergeRequestsSettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;first&quot;: &quot;https://csgit.ucalgary.ca/hira.asad/cpscdemo3.git&quot;,
-    &quot;second&quot;: &quot;41b13cee-78a9-46b0-85e5-e2f917483d74&quot;
+    &quot;second&quot;: &quot;ab6f223c-8393-4b6e-a5ab-99d2b7d9e1db&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -141,7 +142,10 @@
       <option name="presentableId" value="Default" />
       <updated>1712466371800</updated>
       <workItem from="1712789648546" duration="8223000" />
-      <workItem from="1712810721928" duration="3141000" />
+      <workItem from="1712810721928" duration="3480000" />
+      <workItem from="1712820507239" duration="893000" />
+      <workItem from="1712821443287" duration="2018000" />
+      <workItem from="1712866816325" duration="892000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -487,7 +491,31 @@
       <option name="project" value="LOCAL" />
       <updated>1712810228052</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Error handling">
+      <option name="closed" value="true" />
+      <created>1712817306078</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1712817306078</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Error handling">
+      <option name="closed" value="true" />
+      <created>1712817327499</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1712817327499</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Properly established means of viewing refill period as status message at the bottom of the GUI window.">
+      <option name="closed" value="true" />
+      <created>1712817375191</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1712817375191</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,8 +534,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="finished viewing side effects" />
-    <MESSAGE value="added text field and finished view food intake" />
     <MESSAGE value="finished view specific medicine" />
     <MESSAGE value="done save to file" />
     <MESSAGE value="finished close" />
@@ -531,6 +557,8 @@
     <MESSAGE value="Made &quot;viewMedications&quot; public so it is accessible from the AddController class." />
     <MESSAGE value="Adding a medicine now works as intended. Will add error handling shortly." />
     <MESSAGE value="The birth of my magnum opus: master-farshad." />
-    <option name="LAST_COMMIT_MESSAGE" value="The birth of my magnum opus: master-farshad." />
+    <MESSAGE value="Error handling" />
+    <MESSAGE value="Properly established means of viewing refill period as status message at the bottom of the GUI window." />
+    <option name="LAST_COMMIT_MESSAGE" value="Properly established means of viewing refill period as status message at the bottom of the GUI window." />
   </component>
 </project>

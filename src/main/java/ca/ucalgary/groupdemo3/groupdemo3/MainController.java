@@ -22,6 +22,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Optional;
 
 
 public class MainController {
@@ -262,11 +263,6 @@ public class MainController {
 
     }
 
-    @FXML
-    void onDosageMG(ActionEvent event) {
-
-    }
-
     /**
      * Handles the action when the "Load" button is clicked.
      * Opens a file chooser dialog for the user to select a file to load.
@@ -362,43 +358,28 @@ public class MainController {
     }
 
     @FXML
-    void onNextPillTime(ActionEvent event) {
-/**String name = medicine.getName();
- if (medicine.checkExistMedicine(name)) {
- System.out.printf(name+ " not found!");// Output if the medicine is not found
-
- } else {
- int currentDosage = medicine.getCurrentBottle();// Get the current number of pills in the bottle
- System.out.println("Enter the number of milligrams in each dosage:");
- int milligramsPerDosage = scanner.nextInt();// Prompt the user to input the number of milligrams in each dosage
-
- // Calculate total milligrams
- int totalMilligrams = currentDosage * milligramsPerDosage;
-
- System.out.println("Total milligrams for the dosage: " + totalMilligrams +" mg");// Output the total milligrams
- }*/
-    }
-
-    @FXML
     void onRefillPeriod(ActionEvent event) {
         int useDays = 0; // Initializing variable to count number of days left to take medicine before refil
         Medicine medicine;
-        String endDisplay = "Time remaining until next refill: ";
-        String medName = refillMedName.getText();
+        String endDisplay = "";
+        String medName = "";
 
         try {
-            useDays = Integer.parseInt(refillPeriodTextField.getText());
+            showAlert("Refill Period", "Enter the number of days between doses which occurs.");
+            useDays = Integer.parseInt(showTextInputDialog());
             if (useDays <= 0) {
-                statusLabel.setText(endDisplay + "Cannot have period of negative or zero length!");
+                showAlert("Refill period is too low!", "The refill period must be at least 1 in order for the calculation to occur.");
                 return;
             }
         } catch (NumberFormatException e) {
-            statusLabel.setText("Invalid integer for refill period!");
+            showAlert("Invalid integer for refill period!", "Please enter a proper integer value.");
             return;
         }
 
+        showAlert("Refill Period", "Enter the name of the medicine you want information for.");
+        medName = showTextInputDialog();
         if (!data.checkExistMedicine(medName)) {
-            statusLabel.setText("Could not find medicine with that name!");
+            showAlert("Medicine not found!", "Please enter a medicine that already exists!");
             return;
         } else {
             medicine = data.getMedicationInfo(medName);
@@ -441,8 +422,10 @@ public class MainController {
         } else if (numDays > 1 || (numDays == 0 && numWeeks == 0 && numMonths == 0)) {
             endDisplay = endDisplay + numDays + " days";
         } // Outputs number of days
+        endDisplay = endDisplay + ".";
 
-        statusLabel.setText(endDisplay);
+        showAlert("Refill period for " + medName, "Your next refill is in " + endDisplay);
+
     }
 
     /**
@@ -588,4 +571,61 @@ public class MainController {
         rightInfoTextArea.setText(sb.toString());
     }
 
+    @FXML
+    void onNextPillTime(ActionEvent event) {
+        // Get the name of the medicine
+        String name = viewMedicineNameTextField.getText();
+        // Check if the medicine exists
+        if (data.checkExistMedicine(name)) {
+            showAlert("Medicine Not Found", name + " does not exist!");
+            return;
+        }
+
+        // Prompt the user to input the time gaps between each pill intake in hours
+        showAlert("Time Gaps", "Enter the time gaps between each pill intake in hours (e.g., 6):");
+        int timeGap;
+        try {
+            timeGap = Integer.parseInt(showTextInputDialog());
+        } catch (NumberFormatException e) {
+            showAlert("Invalid Input", "Please enter a valid integer for time gaps.");
+            return;
+        }
+
+        // Prompt the user to input the time the last pill was taken
+        showAlert("Last Pill Time", "Enter the time you took the last pill (e.g., 10:30 AM, 12:00 PM):");
+        String lastPillTime = showTextInputDialog();
+        if (lastPillTime == null) {
+            return; // User canceled the input
+        }
+
+        // Calculate the next pill time
+        String nextPillTime = Calculations.getNextPillTime(timeGap, lastPillTime);
+        // Show the next pill time to the user
+        showAlert("Next Pill Time", "You need to take the next pill at " + nextPillTime);
+    }
+    /**
+     * Helper method to display a TextInputDialog and retrieve user input.
+     *
+     * @return The user input as a string, or null if the dialog was canceled.
+     */
+    private String showTextInputDialog() {
+        TextInputDialog dialog = new TextInputDialog();
+        dialog.setHeaderText(null);
+        dialog.setContentText("Enter the required information:");
+        Optional<String> result = dialog.showAndWait();
+        return result.orElse(null);
+    }
+    /**
+     * Display an alert dialog with the specified title and content.
+     *
+     * @param title   The title of the alert dialog.
+     * @param content The content of the alert dialog.
+     */
+    private void showAlert(String title, String content) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
 }
