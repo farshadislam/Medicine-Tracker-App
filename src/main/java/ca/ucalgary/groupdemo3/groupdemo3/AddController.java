@@ -35,32 +35,38 @@ public class AddController {
         this.mainController = mainController;
     }
 
+    /**
+     * Adds a new medicine and displays the change afterwards
+     * @param event
+     */
     @FXML
-    void addMed(ActionEvent event) {
-        int dose = 0;
+    void addMed(ActionEvent event) { // How to add medicine
+        int dose = 0; // Initializing
         int fullBottle = 0;
         int currentBottle = 0;
         double price = 0;
 
-        String name = medName.getText();
+        String name = medName.getText(); // Can be anything, no need for error checking
 
-        try {
+        try { // Have to make sure that inputs are integers
             dose = Integer.parseInt(medDose.getText());
             fullBottle = Integer.parseInt(medFull.getText());
             currentBottle = Integer.parseInt(medCurr.getText());
         } catch (NumberFormatException e) {
-            addStatus.setText("At least one invalid integer input: " + e.getMessage());
+            addStatus.setText("At least one invalid integer input: " + e.getMessage()); // Tells the user what is invalid
+            return;
         }
 
-        try {
+        try { // Needs double for price
             price = Double.parseDouble(medPrice.getText());
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException e) { // Prompts user until it gets desired info
             addStatus.setText("Invalid double input: " + e.getMessage());
+            return;
         }
 
-        data.storeNewMedicine(name, dose, fullBottle, currentBottle, price);
+        data.storeNewMedicine(name, dose, fullBottle, currentBottle, price); // Use data object method to add medicine to ArrayList
 
-        mainController.viewMedications();
+        mainController.viewMedications(); // Changes to display to reflect addition
     }
 
 }

@@ -357,17 +357,21 @@ public class MainController {
         }
     }
 
+    /**
+     * Tells users the next time they have to refill their prescriptions based on dosage
+     * @param event
+     */
     @FXML
     void onRefillPeriod(ActionEvent event) {
-        int useDays = 0; // Initializing variable to count number of days left to take medicine before refil
+        int useDays; // Initializing
         Medicine medicine;
         String endDisplay = "";
-        String medName = "";
+        String medName;
 
-        try {
+        try { // Needs proper integer value
             showAlert("Refill Period", "Enter the number of days between doses which occurs.");
             useDays = Integer.parseInt(showTextInputDialog());
-            if (useDays <= 0) {
+            if (useDays <= 0) { // Will not perform later tasks without proper type
                 showAlert("Refill period is too low!", "The refill period must be at least 1 in order for the calculation to occur.");
                 return;
             }
@@ -378,11 +382,11 @@ public class MainController {
 
         showAlert("Refill Period", "Enter the name of the medicine you want information for.");
         medName = showTextInputDialog();
-        if (!data.checkExistMedicine(medName)) {
+        if (!data.checkExistMedicine(medName)) { // Must be able to identify a valid medicine by name
             showAlert("Medicine not found!", "Please enter a medicine that already exists!");
             return;
         } else {
-            medicine = data.getMedicationInfo(medName);
+            medicine = data.getMedicationInfo(medName); // Retrieves necessary object information
         }
 
         int currentNum = medicine.getCurrentBottle(); // Grabs current number of pills in bottle
@@ -424,7 +428,7 @@ public class MainController {
         } // Outputs number of days
         endDisplay = endDisplay + ".";
 
-        showAlert("Refill period for " + medName, "Your next refill is in " + endDisplay);
+        showAlert("Refill period for " + medName, "Your next refill is in " + endDisplay); // Gives formatted output
 
     }
 
