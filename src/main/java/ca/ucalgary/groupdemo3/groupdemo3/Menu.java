@@ -348,6 +348,35 @@ public class Menu { // commenttt
             System.out.printf("core.objects.Medicine with name '%s' does not exist!%n", deleteMedication);
         }
     }
+
+    /**
+     * Retrieves and displays the time for the next pill intake for a specified medicine.
+     * Prompts the user to enter the name of the medicine.
+     * Checks if the entered medicine exists in the program.
+     * If the medicine exists, retrieves its information and calculates the time for the next pill intake.
+     * @see Data checkExistMedicine(String)
+     * @see Data getMedicationInfo(String)
+     * @see Calculations getNextPillTime(Medicine)
+     */
+    private static void menuRetrieveNextPillTime() {
+        System.out.println("Enter the name of the medicine: ");
+        String medicineName = scanner.nextLine();
+        boolean medicineExists = data.checkExistMedicine(medicineName); // Checks if the entered medicine exists in the program.
+        if (!medicineExists) {
+            System.out.printf("%s does not exist!\n", medicineName); // Output if the medicine doesn't exist.
+        } else {
+            System.out.println("Enter the time gaps between each pill intake in hours (e.g., 6):");
+            int timeGap = scanner.nextInt(); // Prompt the user to input the time gaps between each pill intake in hours
+            System.out.println("Enter the time you took the last pill (e.g., 10:30 AM, 12:00 PM):");
+            scanner.nextLine(); // Consume newline character
+            String lastPillTime = scanner.nextLine(); // Prompt the user to input the time the last pill was taken
+
+            // Calculate the next pill intake time
+            String nextPillTime = Calculations.getNextPillTime(timeGap, lastPillTime);
+            System.out.println("You need to take the next pill at " + nextPillTime + ".");
+        }
+    }
+
 }
 
 
