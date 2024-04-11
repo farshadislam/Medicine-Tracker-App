@@ -44,8 +44,32 @@ public class Calculations {
         // Needs to be written in
     }
 
-    public static void getNextPillTime() {
-        // Needs to be written in
+    public static String getNextPillTime(int timeGap, String lastPillTime) {
+        // Convert lastPillTime to 24-hour format for easier calculation
+        int lastPillHour = Integer.parseInt(lastPillTime.substring(0, lastPillTime.indexOf(":")));
+        int lastPillMinute = Integer.parseInt(lastPillTime.substring(lastPillTime.indexOf(":") + 1, lastPillTime.indexOf(" ")));
+        String amPmIndicator = lastPillTime.substring(lastPillTime.indexOf(" ") + 1);
+
+        if (amPmIndicator.equalsIgnoreCase("pm") && lastPillHour != 12) {
+            lastPillHour += 12; // Convert to 24-hour format
+        } else if (amPmIndicator.equalsIgnoreCase("am") && lastPillHour == 12) {
+            lastPillHour = 0; // Special case for 12:00 AM
+        }
+
+        // Calculate next pill time
+        int nextPillHour = (lastPillHour + timeGap) % 24;
+        int nextPillMinute = lastPillMinute;
+
+        // Convert back to 12-hour format for display
+        String nextAmPmIndicator = nextPillHour < 12 ? "AM" : "PM";
+        if (nextPillHour > 12) {
+            nextPillHour -= 12;
+        } else if (nextPillHour == 0) {
+            nextPillHour = 12; // Special case for 12:00 AM
+        }
+
+        // Format the next pill intake time
+        return String.format("%02d:%02d %s", nextPillHour, nextPillMinute, nextAmPmIndicator);
     }
 }
 
