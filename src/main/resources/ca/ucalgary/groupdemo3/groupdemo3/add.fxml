@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane prefHeight="248.0" prefWidth="267.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.ucalgary.groupdemo3.groupdemo3.AddController">
+<AnchorPane prefHeight="287.0" prefWidth="237.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.ucalgary.groupdemo3.groupdemo3.AddController">
    <children>
       <VBox prefHeight="252.0" prefWidth="267.0">
          <children>
@@ -21,8 +20,9 @@
             <TextField fx:id="medCurr" />
             <Label text="Monthly price of medication" />
             <TextField fx:id="medPrice" />
-            <Button mnemonicParsing="false" onAction="#addMed" prefHeight="31.0" prefWidth="605.0" text="Add new medicine" />
+            <Button mnemonicParsing="false" onAction="#addMed" prefHeight="94.0" prefWidth="276.0" text="Add new medicine" />
          </children>
       </VBox>
+      <Label fx:id="addStatus" layoutX="-2.0" layoutY="255.0" prefHeight="32.0" prefWidth="267.0" />
    </children>
 </AnchorPane>
