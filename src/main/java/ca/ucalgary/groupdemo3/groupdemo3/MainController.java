@@ -13,11 +13,14 @@ import ca.ucalgary.groupdemo3.groupdemo3.util.FileSaver;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import java.io.File;
+import java.io.IOException;
 
 
 public class MainController {
@@ -178,7 +181,20 @@ public class MainController {
 
     @FXML
     void onAddMedicine(ActionEvent event) {
+        FXMLLoader fxmlLoader = new FXMLLoader(MainGUI.class.getResource("add.fxml"));
+        Scene scene = null;
+        try {
+            scene = new Scene(fxmlLoader.load(), 350, 350);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
+        AddController addM = fxmlLoader.getController();
+        addM.establishData(data, this);
+        Stage newMed = new Stage();
+        newMed.setTitle("Add a new medicine!");
+        newMed.setScene(scene);
+        newMed.show();
     }
 
     /**
@@ -294,7 +310,7 @@ public class MainController {
     /**
      * Displays the list of medications in the leftInfoTextArea.
      */
-    private void viewMedications() {
+    public void viewMedications() {
         // StringBuilder to construct the output
         StringBuilder sb = new StringBuilder();
 
