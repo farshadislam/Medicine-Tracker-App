@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Add"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="248.0" prefWidth="267.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.ucalgary.groupdemo3.groupdemo3.AddController">
+   <children>
+      <VBox prefHeight="252.0" prefWidth="267.0">
+         <children>
+            <Label text="Name" />
+            <TextField fx:id="medName" />
+            <Label text="Dosage" />
+            <TextField fx:id="medDose" style="-fx-background-color: WHITE;" />
+            <Label text="Number of pills in full bottle" />
+            <TextField fx:id="medFull" />
+            <Label text="Number of pills currently in bottle" />
+            <TextField fx:id="medCurr" />
+            <Label text="Monthly price of medication" />
+            <TextField fx:id="medPrice" />
+            <Button mnemonicParsing="false" onAction="#addMed" prefHeight="31.0" prefWidth="605.0" text="Add new medicine" />
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>
