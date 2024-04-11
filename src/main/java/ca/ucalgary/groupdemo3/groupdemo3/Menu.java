@@ -338,14 +338,6 @@ public class Menu { // commenttt
         }
     }
 
-    private static void menuEnterCheapestMedication() {
-
-    }
-
-    private static void menuEnterPriciestMedication() {
-
-    }
-
     private static void menuDeleteMedication() {
         System.out.println("Enter medicine's name to remove it from the program: ");
         String deleteMedication = EnterName();

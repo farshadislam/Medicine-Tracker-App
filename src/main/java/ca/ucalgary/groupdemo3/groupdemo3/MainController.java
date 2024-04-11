@@ -21,6 +21,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class MainController {
@@ -251,6 +252,13 @@ public class MainController {
 
     @FXML
     void onDeleteMedication(ActionEvent event) {
+        boolean delSuccess = data.deleteMedicine(madicationNamedelTextField.getText());
+        if (delSuccess) {
+            viewMedications();
+            statusLabel.setText("Medicine has been deleted!");
+        } else {
+            statusLabel.setText("Medicine could not be deleted!");
+        }
 
     }
 
@@ -332,16 +340,48 @@ public class MainController {
 
     @FXML
     void onLowestExpense(ActionEvent event) {
+        ArrayList<Medicine> medicines = data.getAllMedicineInfo();
 
+        if (medicines.isEmpty()) { // No error if medicines is currently empty
+            statusLabel.setText("No medicines found! Lowest price is $0.00.");
+        }
+
+        else {
+            String name = medicines.get(0).getName(); // Initialization
+            double min = medicines.get(0).getPrice();
+
+            for (Medicine medicine : medicines) { // Finding lowest priced medicine and obtaining attributes
+                if (medicine.getPrice() < min) {
+                    min = medicine.getPrice(); // Sets price and name of cheapest item in medicines
+                    name = medicine.getName();
+                }
+            }
+
+            statusLabel.setText("Lowest priced medicine is " + name + ", at a price of " + min);
+        }
     }
 
     @FXML
     void onNextPillTime(ActionEvent event) {
+/**String name = medicine.getName();
+ if (medicine.checkExistMedicine(name)) {
+ System.out.printf(name+ " not found!");// Output if the medicine is not found
 
+ } else {
+ int currentDosage = medicine.getCurrentBottle();// Get the current number of pills in the bottle
+ System.out.println("Enter the number of milligrams in each dosage:");
+ int milligramsPerDosage = scanner.nextInt();// Prompt the user to input the number of milligrams in each dosage
+
+ // Calculate total milligrams
+ int totalMilligrams = currentDosage * milligramsPerDosage;
+
+ System.out.println("Total milligrams for the dosage: " + totalMilligrams +" mg");// Output the total milligrams
+ }*/
     }
 
     @FXML
     void onRefillPeriod(ActionEvent event) {
+
 
     }
 

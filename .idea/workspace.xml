@@ -4,13 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="Most indubitably crucial crediting of code authors by Farshad Mohammad Islam.">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/add.fxml" afterDir="false" />
+    <list default="true" id="13b735a6-0d8d-413f-9e5b-bf8ef5b70157" name="Changes" comment="Adding a medicine now works as intended. Will add error handling shortly.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/ucalgary/groupdemo3/groupdemo3/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ca/ucalgary/groupdemo3/groupdemo3/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ca/ucalgary/groupdemo3/groupdemo3/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,6 +78,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\punja\Desktop\CPSC233\cpscdemo3\src\main\resources\ca\ucalgary\groupdemo3\groupdemo3" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ca.ucalgary.groupdemo3.groupdemo3" />
     </key>
@@ -122,7 +135,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712466371800</updated>
-      <workItem from="1712789648546" duration="1033000" />
+      <workItem from="1712789648546" duration="7641000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -412,7 +425,55 @@
       <option name="project" value="LOCAL" />
       <updated>1712790603952</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Creation of the &quot;add&quot; FXML file by Farshad Mohammad Islam.">
+      <option name="closed" value="true" />
+      <created>1712790760913</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1712790760913</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Added a controller specifically for adding new medicines.">
+      <option name="closed" value="true" />
+      <created>1712798713759</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1712798713759</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Filled in necessary info required for the &quot;add&quot; FXML file.">
+      <option name="closed" value="true" />
+      <created>1712798750247</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1712798750247</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Fully established means of adding new medicine.">
+      <option name="closed" value="true" />
+      <created>1712798806409</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1712798806409</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Made &quot;viewMedications&quot; public so it is accessible from the AddController class.">
+      <option name="closed" value="true" />
+      <created>1712803169243</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1712803169243</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Adding a medicine now works as intended. Will add error handling shortly.">
+      <option name="closed" value="true" />
+      <created>1712803206257</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1712803206257</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,12 +492,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="finished load" />
-    <MESSAGE value="added test file" />
-    <MESSAGE value="finished javadoc and inline comments for load" />
-    <MESSAGE value="changed layout of scene builder" />
-    <MESSAGE value="added text area and finished view medication" />
-    <MESSAGE value="fixed sizing for textareas" />
     <MESSAGE value="fixed size for board" />
     <MESSAGE value="finished viewing side effects" />
     <MESSAGE value="added text field and finished view food intake" />
@@ -456,6 +511,12 @@
     <MESSAGE value="finished inline and javadoc comments for view side effects" />
     <MESSAGE value="Absolutely necessary initialization by Farshad Mohammad Islam." />
     <MESSAGE value="Most indubitably crucial crediting of code authors by Farshad Mohammad Islam." />
-    <option name="LAST_COMMIT_MESSAGE" value="Most indubitably crucial crediting of code authors by Farshad Mohammad Islam." />
+    <MESSAGE value="Creation of the &quot;add&quot; FXML file by Farshad Mohammad Islam." />
+    <MESSAGE value="Added a controller specifically for adding new medicines." />
+    <MESSAGE value="Filled in necessary info required for the &quot;add&quot; FXML file." />
+    <MESSAGE value="Fully established means of adding new medicine." />
+    <MESSAGE value="Made &quot;viewMedications&quot; public so it is accessible from the AddController class." />
+    <MESSAGE value="Adding a medicine now works as intended. Will add error handling shortly." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding a medicine now works as intended. Will add error handling shortly." />
   </component>
 </project>
