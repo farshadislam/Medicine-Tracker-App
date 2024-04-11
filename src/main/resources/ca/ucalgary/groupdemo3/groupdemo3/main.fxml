@@ -57,6 +57,7 @@
                 <Button fx:id="viewMedicationButton" mnemonicParsing="false" onAction="#onViewMedicationButton" prefHeight="26.0" prefWidth="123.0" text="View Medicine" />
                 <Button fx:id="viewSideEffectsButton" mnemonicParsing="false" onAction="#onViewSideEffectsButton" prefHeight="26.0" prefWidth="123.0" text="View SIde Effects" />
                 <Button fx:id="viewFoodIntakeButton" mnemonicParsing="false" onAction="#onViewFoodIntake" prefHeight="26.0" prefWidth="123.0" text="Veiw Food Intake" />
+            <TextField fx:id="refillMedName" />
                 <TextField fx:id="refillPeriodTextField" />
                 <Button fx:id="refillPeriodButton" mnemonicParsing="false" onAction="#onRefillPeriod" prefHeight="26.0" prefWidth="123.0" text="Refill Period" />
                 <Button fx:id="totalExpenseButton" mnemonicParsing="false" onAction="#onTotalExpense" prefHeight="26.0" prefWidth="123.0" text="Total Expense" />
@@ -90,4 +91,3 @@
         </SplitPane>
     </center>
 </BorderPane>
-

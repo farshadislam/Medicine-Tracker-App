@@ -63,7 +63,7 @@ public class MainController {
     private Button dosageMGButton;
 
     @FXML
-    private TextField viewMedicineNameTextField;
+    private TextField viewMedicineNameTextField, refillMedName;
 
     @FXML
     private TextField foodIntakeTextField;
@@ -381,8 +381,68 @@ public class MainController {
 
     @FXML
     void onRefillPeriod(ActionEvent event) {
+        int useDays = 0; // Initializing variable to count number of days left to take medicine before refil
+        Medicine medicine;
+        String endDisplay = "Time remaining until next refill: ";
+        String medName = refillMedName.getText();
 
+        try {
+            useDays = Integer.parseInt(refillPeriodTextField.getText());
+            if (useDays <= 0) {
+                statusLabel.setText(endDisplay + "Cannot have period of negative or zero length!");
+                return;
+            }
+        } catch (NumberFormatException e) {
+            statusLabel.setText("Invalid integer for refill period!");
+            return;
+        }
 
+        if (!data.checkExistMedicine(medName)) {
+            statusLabel.setText("Could not find medicine with that name!");
+            return;
+        } else {
+            medicine = data.getMedicationInfo(medName);
+        }
+
+        int currentNum = medicine.getCurrentBottle(); // Grabs current number of pills in bottle
+        int dosage = medicine.getDosage(); // Grabs medicine's dosage
+
+        int dosesLeft = (int) (double) (currentNum / dosage); // Gets number of doses left until they can no longer medicate with the current amount
+        int daysLeft = useDays * dosesLeft; // Multiplies the number of doses by how often it is taken to find
+
+        int numMonths = (int) Math.floor((double) daysLeft / 30);
+        daysLeft %= 30; // Calculates number of months
+
+        int numWeeks = (int) Math.floor((double) daysLeft / 7);
+        daysLeft %= 7; // Calculates number of weeks
+
+        int numDays = daysLeft; // Finds number of remaining days past all of that
+
+        if (numMonths == 1) {
+            endDisplay = endDisplay + numMonths + " month";
+        } else if (numMonths > 1) {
+            endDisplay = endDisplay + numMonths + " months";
+        } // Outputs number of months remaining
+
+        if (numWeeks > 0 && numMonths > 0) {
+            endDisplay = endDisplay + ", ";
+        }
+        if (numWeeks == 1) {
+            endDisplay = endDisplay + numWeeks + " week";
+        } else if (numWeeks > 1) {
+            endDisplay = endDisplay + numWeeks + " weeks";
+        } // Outputs number of weeks remaining
+
+        if (numWeeks > 0 && numDays > 0) {
+            endDisplay = endDisplay + ", ";
+        }
+        if (numDays == 1) {
+            endDisplay = endDisplay + numDays + " day";
+        } else if (numDays > 1 || (numDays == 0 && numWeeks == 0 && numMonths == 0)) {
+            endDisplay = endDisplay + numDays + " days";
+        } // Outputs number of days
+
+        statusLabel.setText(endDisplay);
     }
 
     /**
