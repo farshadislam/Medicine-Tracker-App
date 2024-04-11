@@ -34,7 +34,7 @@ public class AddController {
         int fullBottle = Integer.parseInt(medFull.getText());
         int currentBottle = Integer.parseInt(medCurr.getText());
         double price = Integer.parseInt(medPrice.getText());
-        data.storeNewMedicine();
+        data.storeNewMedicine(name, dose, fullBottle, currentBottle, price);
     }
 
 }
