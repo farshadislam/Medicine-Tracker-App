@@ -23,8 +23,11 @@ public class AddController {
 
     private Data data;
 
-    public void establishData(Data data) {
+    private MainController mainController;
+
+    public void establishData(Data data, MainController mainController) {
         this.data = data;
+        this.mainController = mainController;
     }
 
     @FXML
@@ -33,8 +36,10 @@ public class AddController {
         int dose = Integer.parseInt(medDose.getText());
         int fullBottle = Integer.parseInt(medFull.getText());
         int currentBottle = Integer.parseInt(medCurr.getText());
-        double price = Integer.parseInt(medPrice.getText());
+        double price = Double.parseDouble(medPrice.getText());
         data.storeNewMedicine(name, dose, fullBottle, currentBottle, price);
+
+        mainController.viewMedications();
     }
 
 }
